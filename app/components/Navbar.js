@@ -51,8 +51,33 @@ const Navbar = () => {
                   
                 </ul>
               </li>
-          <li className="text-white">More Pages</li>
-          <li className="text-white">Accounts</li>
+              <li className="relative group">
+                <a href="/" className="text-white">More Pages</a>
+                <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
+                  <li><a href="/" className="block px-4 py-2 text-white">Contact Us</a></li>
+                  <li><a href="/" className="block px-4 py-2 text-white">News</a></li>
+                  <li><a href="/" className="block px-4 py-2 text-white">Calendar</a></li>
+				  <li><a href="/" className="block px-4 py-2 text-white">Tuition and fees</a></li>
+				  <li><a href="/" className="block px-4 py-2 text-white">Photo Gallery</a></li>
+				  <li><a href="/" className="block px-4 py-2 text-white">Definition Of Role</a></li>
+				  <li><a href="/" className="block px-4 py-2 text-white">School Anthem & Pledge</a></li>
+				  <li><a href="/" className="block px-4 py-2 text-white">Horarium</a></li>
+				  <li><a href="/" className="block px-4 py-2 text-white">Honour Code</a></li>
+				  <li><a href="/" className="block px-4 py-2 text-white">Brief History</a></li>
+				  <li><a href="/" className="block px-4 py-2 text-white">Alumni Blogs</a></li>
+				  <li><a href="/" className="block px-4 py-2 text-white">Downloads</a></li>
+				  <li><a href="/" className="block px-4 py-2 text-white">Prospective Students info</a></li>
+				  
+				  
+				  
+                </ul>
+              </li>
+              <li className="relative group">
+                <a href="/" className="text-white">Accounts</a>
+                <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
+                  <li><a href="/" className="block px-4 py-2 text-white">Login</a></li>
+                  </ul>
+              </li>
           <li className="text-white">Library</li>
         </ul>
         <li>
