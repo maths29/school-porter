@@ -1,5 +1,6 @@
 import Image from "next/image";
 import { MdMenu } from "react-icons/md";
+import Link from "next/link";
 
 const Navbar = () => {
   return (
@@ -13,182 +14,184 @@ const Navbar = () => {
           <Image src="/logo.png" alt="Logo" width={80} height={80} />
         </span>
         <ul className="flex gap-12">
-          <li className="text-orange-600">Home</li>
+          <li className="text-orange-600">
+            <Link href="/">Home</Link>
+          </li>
           <li className="relative group">
-            <a href="/" className="text-white">
+            <Link href="" className="text-white">
               Staff & HRD
-            </a>
+            </Link>
             <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Academic Staff
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Administrative Staff
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="relative group">
-            <a href="/" className="text-white">
+            <Link href="" className="text-white">
               Admission
-            </a>
+            </Link>
             <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Admission policy
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Apply now
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Check Entrance Exam Result
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Reprint Application
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Take Entrance Exam
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="relative group">
-            <a href="/" className="text-white">
+            <Link href="" className="text-white">
               Departments{" "}
-            </a>
+            </Link>
             <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Head Of Department
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Subject Offered
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Guidiance & Counselling
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Research & library
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
 
           <li className="relative group">
-            <a href="/" className="text-white">
+            <Link href="" className="text-white">
               Academics
-            </a>
+            </Link>
             <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   School Management Structure
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Academics
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="relative group">
-            <a href="/" className="text-white">
+            <Link href="" className="text-white">
               More Pages
-            </a>
+            </Link>
             <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Contact Us
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   News
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Calendar
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Tuition and fees
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Photo Gallery
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Definition Of Role
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   School Anthem & Pledge
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Horarium
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Honour Code
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Brief History
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Alumni Blogs
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Downloads
-                </a>
+                </Link>
               </li>
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Prospective Students info
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
           <li className="relative group">
-            <a href="/" className="text-white">
+            <Link href="" className="text-white">
               Accounts
-            </a>
+            </Link>
             <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
               <li>
-                <a href="/" className="block px-4 py-2 text-white">
+                <Link href="" className="block px-4 py-2 text-white">
                   Login
-                </a>
+                </Link>
               </li>
             </ul>
           </li>
