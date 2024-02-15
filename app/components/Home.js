@@ -1,7 +1,9 @@
+import ImageCarousel from '../components/ImageCarousel';
 const Home = () => {
   return (
     <div>
-      Home with 2 images with slider
+      <h2>SWIFT EDUCATIONAL <br>CENTER(SEC)</br></h2>
+      <ImageCarousel />
     </div>
   )
 }
