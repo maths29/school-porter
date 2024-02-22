@@ -1,5 +1,5 @@
 "use client";
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 import { BsChevronCompactLeft, BsChevronCompactRight } from "react-icons/bs";
 import { RxDotFilled } from "react-icons/rx";
 
@@ -28,15 +28,23 @@ const ImageCarousel = () => {
     setCurrentIndex(slideIndex);
   };
 
+  useEffect(() => {
+    const interval = setInterval(() => {
+      nextSlide();
+    }, 3000); // Change the interval duration as needed (in milliseconds)
+
+    return () => clearInterval(interval);
+  }, [currentIndex]);
+  
   return (
-    <div className="max-w-[1400px] h-[780px] w-full m-auto py-16 px-4 relative group">
+    <div className="h-[60vh] w-full rounded-2xl relative group border">
       <div
         style={{
           backgroundImage: `url(${images[currentIndex].url})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-        }}
-        className="h-[60vh] w-full rounded-2xl"
+        }} 
+        className="h-full"
       >
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
           <BsChevronCompactLeft onClick={prevSlide} size={30} />
