@@ -31,11 +31,11 @@ const ImageCarousel = () => {
   useEffect(() => {
     const interval = setInterval(() => {
       nextSlide();
-    }, 3000); // Change the interval duration as needed (in milliseconds)
+    }, 3000);
 
     return () => clearInterval(interval);
   }, [currentIndex]);
-  
+
   return (
     <div className="h-[60vh] w-full rounded-2xl relative group border">
       <div
@@ -43,7 +43,7 @@ const ImageCarousel = () => {
           backgroundImage: `url(${images[currentIndex].url})`,
           backgroundSize: "cover",
           backgroundPosition: "center",
-        }} 
+        }}
         className="h-full"
       >
         <div className="hidden group-hover:block absolute top-[50%] -translate-x-0 translate-y-[-50%] left-5 text-2xl rounded-full p-2 bg-black/20 text-white cursor-pointer">
