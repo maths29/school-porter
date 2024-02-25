@@ -1,202 +1,50 @@
+'use'
+import { useState } from 'react';
 import Image from "next/image";
 import { MdMenu } from "react-icons/md";
 import Link from "next/link";
 
 const Navbar = () => {
+  const [showLinks, setShowLinks] = useState(false);
+
+  const toggleLinks = () => {
+    setShowLinks(!showLinks);
+  };
+
   return (
     <nav className="bg-[#011431]">
       <div className="flex gap-6 items-center">
         <span className="md:hidden flex justify-between text-white items-center px-1">
           <h1 className="text-xl font-bold">Swift School</h1>
-          <MdMenu />
+          <MdMenu onClick={toggleLinks} />
         </span>
         <span className="hidden md:flex">
           <Image src="/logo.png" alt="Logo" width={80} height={80} />
         </span>
-        <ul className="flex gap-12">
+        <ul className={`flex md:flex gap-12 ${showLinks ? 'flex' : 'hidden'} md:gap-0`}>
           <li className="text-orange-600">
             <Link href="/">Home</Link>
           </li>
+          {/* Add other list items here */}
           <li className="relative group">
-            <Link href="" className="text-white">
+            <Link href="#" className="text-white">
               Staff & HRD
             </Link>
             <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
               <li>
-                <Link href="" className="block px-4 py-2 text-white">
+                <Link href="#" className="block px-4 py-2 text-white">
                   Academic Staff
                 </Link>
               </li>
               <li>
-                <Link href="" className="block px-4 py-2 text-white">
+                <Link href="#" className="block px-4 py-2 text-white">
                   Administrative Staff
                 </Link>
               </li>
             </ul>
           </li>
-          <li className="relative group">
-            <Link href="" className="text-white">
-              Admission
-            </Link>
-            <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Admission policy
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Apply now
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Check Entrance Exam Result
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Reprint Application
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Take Entrance Exam
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className="relative group">
-            <Link href="" className="text-white">
-              Departments{" "}
-            </Link>
-            <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Head Of Department
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Subject Offered
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Guidiance & Counselling
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Research & library
-                </Link>
-              </li>
-            </ul>
-          </li>
-
-          <li className="relative group">
-            <Link href="" className="text-white">
-              Academics
-            </Link>
-            <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  School Management Structure
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Academics
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className="relative group">
-            <Link href="" className="text-white">
-              More Pages
-            </Link>
-            <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Contact Us
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  News
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Calendar
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Tuition and fees
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Photo Gallery
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Definition Of Role
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  School Anthem & Pledge
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Horarium
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Honour Code
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Brief History
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Alumni Blogs
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Downloads
-                </Link>
-              </li>
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Prospective Students info
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className="relative group">
-            <Link href="" className="text-white">
-              Accounts
-            </Link>
-            <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
-              <li>
-                <Link href="" className="block px-4 py-2 text-white">
-                  Login
-                </Link>
-              </li>
-            </ul>
-          </li>
-          <li className="text-white">Library</li>
         </ul>
+        {/* Search input */}
         <li>
           <div className="relative">
             <input
