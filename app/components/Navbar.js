@@ -1,7 +1,7 @@
 "use client";
 import { useState } from "react";
 import Image from "next/image";
-import { MdOutlineMenu } from "react-icons/md";
+import { MdOutlineMenu, MdClose } from "react-icons/md";
 import Link from "next/link";
 
 const Navbar = () => {
@@ -12,26 +12,28 @@ const Navbar = () => {
   };
   return (
     <nav className="bg-[rgb(1,20,49)] flex p-2 md:px-8">
-      <div className="w-full flex flex-col md:flex-row justify-between text-white md:items-center">
-        <Link href="/" className="flex gap-1 md:gap-2 items-center">
-          <Image src="/logo.png" alt="Logo" width={50} height={50} />
-          <h1 className="">Swift School</h1>
-        </Link>
-        {menu ? (
-          <button
-            className="md:hidden text-2xl cursor-pointer"
-            onClick={handleOpen}
-          >
-            close
-          </button>
-        ) : (
-          <button
-            className="md:hidden text-2xl cursor-pointer"
-            onClick={handleOpen}
-          >
-            <MdOutlineMenu />
-          </button>
-        )}
+      <div className="w-full flex flex-col gap-6 md:flex-row justify-between text-white md:items-center">
+        <div className="flex justify-between">
+          <Link href="/" className="flex gap-1 md:gap-2 items-center">
+            <Image src="/logo.png" alt="Logo" width={50} height={50} />
+            <h1 className="">Swift School</h1>
+          </Link>
+          {menu ? (
+            <button
+              className="md:hidden text-2xl cursor-pointer"
+              onClick={handleOpen}
+            >
+              <MdClose />
+            </button>
+          ) : (
+            <button
+              className="md:hidden text-2xl cursor-pointer"
+              onClick={handleOpen}
+            >
+              <MdOutlineMenu />
+            </button>
+          )}
+        </div>
         <ul className="hidden md:flex justify-between gap-4 w-11/12 md:w-10/12 mt-2 ">
           <li className="hover:text-orange-600">
             <Link href="/">Home</Link>
