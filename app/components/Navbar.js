@@ -11,7 +11,7 @@ const Navbar = () => {
     setMenu(!menu);
   };
   return (
-    <nav className="bg-[rgb(1,20,49)] flex p-2 md:px-8">
+    <nav className="bg-[rgb(1,20,49)] flex  p-2 md:px-8">
       <div className="w-full flex flex-col gap-6 md:flex-row justify-between text-white md:items-center">
         <div className="flex justify-between">
           <Link href="/" className="flex gap-1 md:gap-2 items-center">
@@ -34,7 +34,7 @@ const Navbar = () => {
             </button>
           )}
         </div>
-        <ul className="hidden md:flex justify-between gap-4 w-11/12 md:w-10/12 mt-2 ">
+        <ul className="hidden md:flex justify-between gap-4 w-11/12 md:w-10/12">
           <li className="hover:text-orange-600">
             <Link href="/">Home</Link>
           </li>
@@ -215,7 +215,9 @@ const Navbar = () => {
               </li>
             </ul>
           </li>
-          <li className="">Library</li>
+          <li className="">
+            <Link href="">Library</Link>
+          </li>
           {/* <li>
               <div className="relative">
                 <input
@@ -254,7 +256,7 @@ const Navbar = () => {
               <Link href="" className="">
                 Staff & HRD
               </Link>
-              <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
+              <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg">
                 <li>
                   <Link href="" className="block ">
                     Academic Staff
@@ -427,7 +429,9 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="">Library</li>
+            <li className="">
+            <Link href="">Library</Link>
+          </li>
             {/* <li>
               <div className="relative">
                 <input
