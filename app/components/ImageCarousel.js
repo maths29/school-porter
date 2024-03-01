@@ -37,7 +37,7 @@ const ImageCarousel = () => {
   }, [currentIndex]);
 
   return (
-    <div className="h-[60vh] w-full rounded-2xl relative group border">
+    <div className="h-[80vh] w-full rounded-2xl relative group">
       <div
         style={{
           backgroundImage: `url(${images[currentIndex].url})`,
