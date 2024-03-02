@@ -10,6 +10,18 @@ const Navbar = () => {
   const handleOpen = () => {
     setMenu(!menu);
   };
+
+  const toggleSubMenu = (index) => {
+    const subMenu = document.getElementById(`submenu-${index}`);
+    const allSubMenus = document.querySelectorAll("[id^='submenu-']");
+    allSubMenus.forEach((menu) => {
+      if (menu !== subMenu) {
+        menu.classList.add("hidden");
+      }
+    });
+    subMenu.classList.toggle("hidden");
+  };
+
   return (
     <nav className="bg-[rgb(1,20,49)] flex  p-2 md:px-8">
       <div className="w-full flex flex-col gap-6 md:flex-row justify-between text-white md:items-center">
@@ -252,11 +264,9 @@ const Navbar = () => {
             <li className="text-orange-600">
               <Link href="/">Home</Link>
             </li>
-            <li className="relative group">
-              <Link href="" className="">
+            <li  onClick={() => toggleSubMenu(1)}>
                 Staff & HRD
-              </Link>
-              <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg">
+              <ul id="submenu-1">
                 <li>
                   <Link href="" className="block ">
                     Academic Staff
@@ -269,11 +279,9 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="relative group">
-              <Link href="" className="">
+            <li onClick={() => toggleSubMenu(2)}>
                 Admission
-              </Link>
-              <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
+              <ul id="submenu-2">
                 <li>
                   <Link href="" className="block ">
                     Admission policy
@@ -301,11 +309,9 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="relative group">
-              <Link href="" className="">
-                Departments{" "}
-              </Link>
-              <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
+            <li  onClick={() => toggleSubMenu(3)}>
+                Departments
+              <ul id="submenu-3">
                 <li>
                   <Link href="" className="block ">
                     Head Of Department
@@ -328,11 +334,9 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="relative group">
-              <Link href="" className="">
+            <li  onClick={() => toggleSubMenu(4)}>
                 Academics
-              </Link>
-              <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
+              <ul id="submenu-4">
                 <li>
                   <Link href="" className="block ">
                     School Management Structure
@@ -345,11 +349,9 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="relative group">
-              <Link href="" className="">
+            <li  onClick={() => toggleSubMenu(5)}>
                 More Pages
-              </Link>
-              <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
+              <ul id="submenu-5">
                 <li>
                   <Link href="" className="block ">
                     Contact Us
@@ -417,11 +419,9 @@ const Navbar = () => {
                 </li>
               </ul>
             </li>
-            <li className="relative group">
-              <Link href="" className="">
+            <li  onClick={() => toggleSubMenu(6)}>
                 Accounts
-              </Link>
-              <ul className="absolute hidden group-hover:block bg-gray-800 rounded-lg mt-2">
+              <ul id="submenu-6">
                 <li>
                   <Link href="" className="block ">
                     Login
